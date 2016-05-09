@@ -1,0 +1,13 @@
+//On cherche la custom taxonomy edition de la page
+$magazine   = ts_get_the_category('magazine', 'big_array:1', '', $ts_query->post->ID);
+
+//On affiche le slug de la custom taxonomy edition
+$magazine = esc_html($magazine[0]['slug']);
+
+//on concataine dans du php
+$ts_template_content = 
+    '[blog_slider limit="5" fullwidth="no" cat="" include="" exclude="" exclude_previous_posts="yes" 
+    exclude_these_later="yes" title_size="" text_align="center" allow_videos="yes" image_size="large" 
+    ignore_sticky_posts="0" 
+    display_taxonomy="magazine"  
+    taxonomy="magazine" term="'.$magazine.'"  tag_ID="257"][/blog_slider]
