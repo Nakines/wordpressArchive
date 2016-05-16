@@ -1,4 +1,4 @@
-/* Creation widget */
+/* Creation widget dans functions.php */
 add_action( 'widgets_init', 'theme_slug_widgets_init' );
 
 function theme_slug_widgets_init() {
@@ -27,5 +27,11 @@ function theme_slug_widgets_init2() {
     ) );
 }
 
+
+
+/*insertion du widget dans le template/page /*
+
+<?php dynamic_sidebar( 'google-tag' ); ?>
+<?php dynamic_sidebar( 'subscribers' ); ?>
 
 
