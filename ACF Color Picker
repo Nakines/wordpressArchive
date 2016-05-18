@@ -1,0 +1,8 @@
+Etape: Creation du acf sur une page 
+       Choisir une couleur
+
+//Code
+<a href="" class="" style="background-color:<?php the_field('cta-color'); ?>">
+
+
+C'est tout :p
