@@ -1,0 +1,12 @@
+<?php echo $image['sizes']['thumbnail']; ?>
+
+
+à la base sizes = 150x150 
+
+
+Que faire pour changer?
+
+1. Dans worpdress aller dans settings -> media changer thumbnails sizes par la valeur qu'on souhaite
+2. enregistrer les images sur le bureau et recharger dans media 
+
+:D c'est tout
