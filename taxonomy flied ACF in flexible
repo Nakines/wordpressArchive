@@ -1,0 +1,22 @@
+
+if( have_rows('flexible_content_field_name') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('flexible_content_field_name') ) : the_row();
+
+    // display a sub field value
+
+    $terms = get_sub_field('taxonomy_field_name'); //acf
+    if( $terms ): ?>
+
+	  <ul>
+		  <h2><?php echo $terms->name; ?></h2>
+		  <p><?php echo $terms->slug; ?></p>
+	  </ul>
+
+    <?php endif; ?>
+
+<?php
+    endwhile;
+endif;
+?>
