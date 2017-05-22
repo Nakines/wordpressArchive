@@ -1,0 +1,25 @@
+
+
+/**
+ * Example: [wp custom_taxonomy="taxonomy_slug"]
+ */
+
+
+function list_terms_custom_taxonomy( $atts) {
+    extract( shortcode_atts( array(
+        'custom_taxonomy' => 'portal',
+    ), $atts ) );
+
+    global $post;
+    $string1 = get_the_term_list( $post->ID , $custom_taxonomy, ' ' , ', ' , ' ' );
+    $string1 = strip_tags( $string1 );
+
+    
+    return $string1;
+
+}
+
+add_shortcode( 'ct_terms', 'list_terms_custom_taxonomy' );
+add_filter('widget_text', 'do_shortcode');
+
+// shortcode to use [ct_terms custom_taxonomy=customtaxonomyname]
